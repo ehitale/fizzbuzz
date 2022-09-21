@@ -1,5 +1,14 @@
 fn main() {
+    //base fizzbuzz, no strings attached.
     fb();
+
+    //fizzbuzz with structs
+    #[allow(dead_code)]
+    fb_w_structs();
+    
+    //fizzbuzz with enums
+    #[allow(dead_code)]
+    fb_w_enums();
 }
 
 fn fb() {
@@ -17,4 +26,12 @@ fn fb() {
             _ => println!("{}", x),
         };
     }
+}
+
+fn fb_w_structs() {
+
+}
+
+fn fb_w_enums() {
+
 }
