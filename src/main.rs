@@ -12,8 +12,8 @@ fn main() {
 
     //fizzbuzz with structs
     #[allow(dead_code)]
-    //fb_w_structs();
-    //println!("--------");
+    fb_w_structs();
+    println!("--------");
     
     //fizzbuzz with enums
     #[allow(dead_code)]
@@ -38,9 +38,9 @@ fn fb() {
     };
 }
 
-// fn fb_w_structs() {
-
-// }
+fn fb_w_structs() {
+    // I'm just going to copy and paste some code I already did in Repl.it
+}
 
 fn fb_w_enums() {
     for zed in 0..100 {
