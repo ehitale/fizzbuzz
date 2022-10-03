@@ -60,6 +60,7 @@ fn fb_w_structs() {
 }
 
 fn fb_w_enums() {
+    // just three enums?
     for foo in 0..100 {
         match int_to_divis(foo) {
             Divis::ByFifteen(n) => println!("{}: Fizzbuzz", n), 
