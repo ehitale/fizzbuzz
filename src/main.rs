@@ -22,6 +22,11 @@ fn main() {
     //fizzbuzz with enums
     fb_w_enums();
     println!("--------");
+    
+    //fizzbuzz with enums and a vector
+    fb_w_ev();
+    println!("--------");
+
 }
 
 fn fb() {
@@ -82,5 +87,31 @@ fn int_to_divis (foo: i32) -> Divis {
         (0, _) => Divis::ByThree(foo + 1),
         (_, 0) => Divis::ByFive(foo + 1),
         _ => Divis::ByNOTB(foo + 1),
+    }
+}
+
+fn fb_w_ev () {
+    let mut foo_vec: Vec<String> = Vec::new();
+    
+    for foo in 0..100 {
+        let divis_by_three = (foo + 1) % 3;
+        let divis_by_five = (foo + 1) % 5;
+
+        let bar = (divis_by_three, divis_by_five);
+        let foo_string: String = (foo + 1).to_string();
+
+        let baz = match bar {
+            (0, 0) => String::from("fizzbuzz"),
+            (0, _) => String::from("fizz"),
+            (_, 0) => String::from("buzz"),
+            _ => foo_string,
+        };
+        
+        foo_vec.push(baz);
+
+        print!("{} ", foo_vec[foo]);
+        // no newline after last `foo`.
+        
+        //^make more rusty
     }
 }
